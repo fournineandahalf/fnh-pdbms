@@ -1,0 +1,1457 @@
+/************************************************************************************
+UI ELEMENT STYLING
+*************************************************************************************/
+
+/*  RESETS
+=============================================== */
+.ui,
+.ui > li,
+.ui.nav ul,
+.ui.module-tab .tab-nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* clearfix */
+.ui.nav:after,
+.ui.tab .tab-nav:after,
+.ui.window .bar:after,
+.ui.module-callout:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.ui.nav,
+.ui.module-tab .tab-nav,
+.ui.window .bar,
+.ui.module-callout {
+	display: block;
+	zoom: 1;
+}
+
+
+/************************************************************************************
+SIZES
+*************************************************************************************/
+/* default button size */
+.ui.builder_button,
+.ui.nav li a,
+.ui.module-tab .tab-nav li a,
+.ui.window > div {
+	padding: .625em 1.25em;
+}
+
+.ui.builder_button.large,
+.ui.nav.large li a,
+.ui.module-tab.large .tab-nav li a {
+	font-size: 120%;
+	padding: 10px 20px;
+}
+
+.ui.builder_button.small,
+.ui.nav.small li a,
+.ui.module-tab.small .tab-nav li a {
+	font-size: 70%;
+	padding: 5px 10px;
+}
+
+/************************************************************************************
+BORDER-RADIUS
+*************************************************************************************/
+/* top left corner */
+.ui.rounded,
+.ui.builder_button.rounded:before,
+.ui.nav.rounded > li:first-child,
+.ui.nav.rounded.separate > li,
+.ui.nav.rounded.separate > li a:before,
+.ui.nav.rounded ul,
+.ui.nav.rounded ul > li:first-child,
+.ui.nav.rounded > li:first-child a,
+.ui.nav.rounded > li:first-child a:before,
+.ui.nav.rounded ul > li:first-child a:before,
+.ui.module-tab.vertical.rounded .tab-nav,
+.ui.module-tab.vertical.rounded .tab-nav li:first-child,
+.ui.module-tab.rounded .tab-nav li,
+.ui.window.rounded .bar:first-child,
+.ui.module-accordion.rounded li:first-child,
+.ui.module-accordion.rounded > li:first-child .accordion-title,
+.ui.module-accordion.rounded > li:first-child .accordion-title a:before,
+.ui.module-accordion.rounded.separate .accordion-title a:before,
+.ui.module-callout.rounded,
+.ui.module-callout.rounded:before,
+.ui.nav.rounded > li:first-child:before,
+.ui.nav.fullwidth.rounded:before,
+.ui.glossy.rounded .tab-nav > li a:before,
+.ui.nav.rounded.separate.vertical li:last-child:before,
+.ui.nav.rounded.vertical.separate > li:last-child a:before,
+.ui.module-tab.panel.rounded .tab-nav,
+.ui.module-tab.panel .tab-nav:before
+{
+	border-top-left-radius: 5px;
+}
+/* top right corner */
+.ui.rounded,
+.ui.builder_button.rounded:before,
+.ui.nav.vertical.rounded li:first-child,
+.ui.nav.rounded > li:last-child,
+.ui.nav.rounded.separate > li,
+.ui.nav.rounded.separate > li a:before,
+.ui.nav.rounded ul,
+.ui.nav.rounded ul > li:first-child,
+.ui.nav.rounded > li:last-child a:before,
+.ui.nav.rounded ul > li:first-child a:before,
+.ui.nav.rounded li:last-child a,
+.ui.module-tab.rounded .tab-nav li,
+.ui.window.rounded .bar:first-child,
+.ui.module-accordion.rounded li:first-child,
+.ui.module-accordion.rounded > li:first-child .accordion-title,
+.ui.module-accordion.rounded > li:first-child .accordion-title a:before,
+.ui.module-accordion.rounded.separate .accordion-title a:before,
+.ui.module-callout.rounded,
+.ui.module-callout.rounded:before,
+.ui.nav.rounded > li:last-child:before,
+.ui.nav.vertical.rounded > li:first-child:before,
+.ui.nav.fullwidth.rounded:before,
+.ui.glossy.rounded .tab-nav > li a:before,
+.ui.nav.rounded.separate.vertical li:last-child:before,
+.ui.nav.rounded li:last-child:before,
+.ui.nav.rounded.vertical li:first-child a:before,
+.ui.nav.rounded.vertical.separate > li:last-child a:before,
+.ui.module-tab.panel.rounded .tab-nav,
+.ui.module-tab.panel .tab-nav:before
+{
+	border-top-right-radius: 5px;
+}
+
+/* bottom right corner */
+.ui.rounded,
+.ui.nav.rounded > li:last-child,
+.ui.nav.rounded.separate > li,
+.ui.nav.rounded ul,
+.ui.nav.rounded ul > li:last-child,
+.ui.nav.rounded li:last-child a,
+.ui.window.rounded .bar:last-child,
+.ui.module-accordion.rounded li:last-child,
+.ui.module-accordion.rounded > li:last-child .accordion-title,
+.ui.module-accordion.separate.rounded li.current .accordion-content,
+.ui.module-accordion.rounded li:last-child .accordion-content,
+.ui.module-callout.rounded
+{
+	border-bottom-right-radius: 5px;
+}
+/* bottom left corner */
+.ui.rounded,
+.ui.nav.vertical.rounded li:last-child,
+.ui.nav.rounded > li:first-child,
+.ui.nav.rounded.separate > li,
+.ui.nav.rounded ul,
+.ui.nav.rounded ul > li:last-child,
+.ui.nav.rounded > li:first-child a,
+.ui.module-tab.vertical.rounded .tab-nav,
+.ui.module-tab.vertical.rounded .tab-nav li:last-child,
+.ui.window.rounded .bar:last-child,
+.ui.module-accordion.rounded li:last-child,
+.ui.module-accordion.rounded > li:last-child .accordion-title,
+.ui.module-accordion.separate.rounded li.current .accordion-content,
+.ui.module-accordion.rounded li:last-child .accordion-content,
+.ui.module-callout.rounded
+{
+	border-bottom-left-radius: 5px;
+}
+
+/* no top-left corner */
+.ui.nav.vertical.separate ul li:not(:first-child) a:before,
+.ui.tab.vertical .tab-nav li:not(:first-child) a:before,
+.ui.module-tab.panel.rounded .tab-content,
+.ui.module-tab.vertical li:last-child a:before {
+	border-top-left-radius: 0;
+}
+
+/* no top-right corner */
+.ui.nav.vertical.separate ul li:not(:first-child) a:before,
+.ui.tab.vertical .tab-nav li:not(:first-child) a:before,
+.ui.nav.fullwidth.rounded li:last-child a,
+.ui.nav.fullwidth.rounded li:last-child,
+.ui.nav.vertical.rounded li:last-child,
+.ui.module-tab.panel.rounded .tab-content,
+.ui.module-tab.vertical li:first-child a:before,
+.ui.module-tab.vertical li:last-child a:before {
+	border-top-right-radius: 0;
+}
+
+/* no bottom-left corner */
+.ui.nav.rounded.vertical > li:first-child,
+.ui.nav.rounded.vertical > li:first-child a,
+.ui.module-accordion.rounded > li:last-child.current .accordion-title,
+.ui.module-accordion.separate.rounded li.current .accordion-title {
+	border-bottom-left-radius: 0;
+}
+
+/* no bottom-right */
+.ui.nav.rounded.vertical > li:first-child,
+.ui.nav.rounded.vertical > li:first-child a,
+.ui.nav.fullwidth.rounded li:last-child a,
+.ui.nav.fullwidth.rounded li:last-child,
+.ui.module-accordion.rounded > li:last-child.current .accordion-title,
+.ui.module-accordion.separate.rounded li.current .accordion-title {
+	border-bottom-right-radius: 0;
+}
+
+/* all border-radius */
+.ui.nav.rounded.vertical.separate > li:first-child,
+.ui.nav.rounded.vertical.separate > li:first-child a,
+.ui.nav.rounded.vertical.separate > li:last-child,
+.ui.nav.rounded.vertical.separate > li:last-child a,
+.ui.module-accordion.separate.rounded li,
+.ui.module-accordion.separate.rounded .accordion-title,
+.ui.module-tab.rounded .tab-content
+{
+	border-radius: 5px;
+}
+
+/* no border-radius all */
+.ui.nav.rounded > li:last-child a,
+.ui.nav.rounded.vertical > li:last-child:before,
+.ui.module-tab.rounded.vertical .tab-nav li,
+.ui.nav.rounded.vertical > li:last-child a:before
+{
+	border-radius: 0;
+}
+
+/************************************************************************************
+STYLES
+*************************************************************************************/
+/* embossed */
+.ui.embossed.module-tab.vertical .tab-nav,
+.ui.embossed.builder_button,
+.ui.embossed.nav,
+.ui.embossed.module-callout,
+.ui.embossed.separate > li,
+.ui.embossed.module-accordion .accordion-title,
+.ui.embossed.module-box,
+.ui.embossed.module-tab .tab-content,
+.ui.embossed.window .bar {
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -2px 0 rgba(0,0,0,.25), inset 0 -3px 0 rgba(255,255,255,.2), 0 1px 0 rgba(0,0,0,.1);
+}
+.ui.embossed.separate {
+	box-shadow: none;
+}
+.ui.builder_button:active,
+.ui.nav li:active,
+.ui.module-tab .tab-nav li:active,
+.ui.pressed.separate > li {
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.35);
+}
+
+.ui.builder_button, .ui.nav, .ui .tab-nav > li { position: relative; }
+
+/* shadow */
+.ui.shadow.module-tab.vertical .tab-nav,
+.ui.shadow.builder_button,
+.ui.shadow.nav,
+.ui.shadow.module-callout,
+.ui.shadow.separate > li,
+.ui.shadow.separate > li.current,
+.ui.shadow.module-accordion .accordion-title,
+.ui.shadow.module-accordion li.current .accordion-content,
+.ui.shadow.module-box,
+.ui.shadow.module-tab .tab-content,
+.ui.shadow.window .bar {
+	box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+.ui.shadow > li.current,
+.ui.shadow .tab-nav li.current  { 
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 1px 3px rgba(0,0,0,.3);
+}
+.ui.shadow.separate,
+.ui.shadow > li.current {
+	box-shadow: none;
+}
+.ui.shadow.builder_button:active,
+.ui.shadow.nav li:active,
+.ui.shadow.module-tab .tab-nav li:active,
+.ui.shadow.pressed.separate > li {
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.35);
+}
+
+.ui.shadow.embossed.module-tab.vertical .tab-nav,
+.ui.shadow.embossed.builder_button,
+.ui.shadow.embossed.module-callout,
+.ui.shadow.embossed.separate > li,
+.ui.shadow.embossed.module-accordion .accordion-title,
+.ui.shadow.embossed.module-box,
+.ui.shadow.embossed.module-tab .tab-content,
+.ui.shadow.embossed.window .bar {
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -2px 0 rgba(0,0,0,.25), inset 0 -3px 0 rgba(255,255,255,.2), 0 1px 0 rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3);
+}
+.ui.shadow.embossed.builder_button:active,
+.ui.shadow.embossed.nav li:active,
+.ui.shadow.embossed.module-tab .tab-nav li:active,
+.ui.shadow.embossed.pressed.separate > li {
+	box-shadow: inset 0 1px 2px rgba(0,0,0,.35);
+}
+
+/* glossy style */
+.ui.glossy.builder_button:before,
+.ui.glossy.nav > li a:before,
+.ui.glossy.nav.fullwidth:before,
+.ui.glossy .tab-nav > li a:before,
+.ui.glossy.module-accordion .accordion-title a:before,
+.ui.glossy.module-box:before,
+.ui.glossy.module-callout:before {
+	content: "";
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	/* glossy overlay */
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjQiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	background-image: -moz-linear-gradient(top,  rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.2) 100%);
+	background-image: -webkit-linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.2) 100%);
+	background-image: linear-gradient(top,  rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.2) 100%);
+}
+.ui.nav.fullwidth > li:before,
+.ui.nav > li.current:before,
+.ui.glossy .tab-nav > li.current:before,
+.ui.nav.fullwidth.glossy a:before {
+	background: none;
+}
+
+.ui.nav.fullwidth.glossy:before {
+	height: 1em;
+	top: auto;
+	margin-top: 0;
+}
+
+
+/* minimal */
+.ui.module-tab.minimal .tab-nav {
+	margin-left: 0;
+}
+.ui.module-tab.minimal .tab-content {
+	border-width: 1px 0 0 0;
+	padding: 20px 0 0;
+	box-shadow: none !important;
+	background: none;
+}
+.ui.module-tab.minimal.vertical .tab-content {
+	border-width: 0 0 0 1px;
+	padding: 10px 0 0 20px;
+}
+
+/* gradient */
+.ui.gradient li,
+.ui.gradient.builder_button,
+.ui.gradient.nav,
+.ui.gradient.module-callout,
+.ui.gradient.separate > li,
+.ui.gradient.module-accordion .accordion-title,
+.ui.gradient.window .bar,
+.ui.gradient, 
+.ui.gradient.nav, 
+.ui.gradient.nav ul, 
+.ui.gradient.separate > li, 
+.ui.gradient.module-tab .tab-nav li, 
+.ui.gradient.vertical .tab-nav, 
+.ui.gradient.window .bar, 
+.ui.gradient.module-tab.panel .tab-nav, 
+.ui.gradien.module-box,
+.ui.gradient.module-callout,
+.ui.gradient.module-tab.panel .tab-nav:before {
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjM1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNTA1MDUiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.45)), color-stop(100%,rgba(255,255,255,0)));
+	background-image: -webkit-linear-gradient(top,  rgba(255,255,255,0.45) 0%,rgba(255,255,255,0) 100%);
+	background-image: linear-gradient(to bottom,  rgba(255,255,255,0.45) 0%,rgba(255,255,255,0) 100%);
+}
+
+/************************************************************************************
+COLOURS
+*************************************************************************************/
+
+/*  DEFAULT COLOURS & BORDERS
+================================================ */
+.ui, .ui.nav li a, .ui.nav ul li a, .ui.module-tab .tab-nav li a { 
+	color: #5c5c5c; 
+}
+.ui, 
+.ui.nav, 
+.ui.nav ul, 
+.ui.separate > li, 
+.ui.module-tab .tab-nav li, 
+.ui.vertical .tab-nav, 
+.ui.window .bar, 
+.ui.module-tab.panel .tab-nav, 
+.ui.module-accordion .accordion-title, 
+.ui.module-callout   {
+	background-color: #e7e7e7;
+}
+.ui, 
+.ui.nav ul, 
+.ui.nav li, 
+.ui.module-tab .tab-nav li, 
+.ui.module-tab .tab-content, 
+.ui.window > div, 
+.ui.module-tab.panel .tab-nav, 
+.ui.module-accordion, 
+.ui.module-accordion > li, 
+.ui.module-callout {
+	border-color: #bbb;
+}
+
+.ui .tab-content,
+.ui.window .content,
+.ui.module-accordion .accordion-content { 
+	background: #fff; 
+	color: #333; 
+}
+.ui .tab-content a,
+.ui.window .content a,
+.ui.module-accordion .accordion-content a { 
+	color: inherit;
+}
+
+/* default hover */
+.ui.builder_button:hover,
+.ui.nav li:hover,
+.ui.module-accordion li:hover .accordion-title,
+.ui.module-tab .tab-nav li:hover { 
+	background: #d7d7d7;
+}
+
+.ui.module-tab .tab-nav li.current:hover { 
+	background: #fff !important; 
+}
+
+/* default current color */
+.ui > li.current,
+.ui > li.current:hover,
+.ui .tab-nav li.current  { 
+	background: #666; 
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.2); 
+}
+.ui > li.current > a,
+.ui .tab-nav li a { 
+	color: #fff; 
+}
+
+.ui.module-tab ul.tab-nav li.current a { 
+	color: #333; 
+	cursor: default;
+}
+.ui.module-tab ul.tab-nav li.current   { 
+	background: #fff; 
+	border-bottom-color: #fff; 
+	border-bottom-width: 1px; 
+	border-bottom-style: solid; 
+	margin-bottom: -1px; 
+	box-shadow: none; 
+}
+
+.ui.module-tab.vertical .tab-nav > li.current { 
+	border-bottom-color: inherit;
+	position: relative;
+	z-index: 3;
+	border-right-width: 0; 
+}
+
+
+/*  BLUE COLOURS & BORDERS
+================================================ */
+.ui.blue,
+.ui.blue.nav li a, 
+.ui.blue.nav ul li a, 
+.ui.blue.module-tab .tab-nav li a { 
+	color: #edf3ff; 
+}
+.ui.blue, 
+.ui.blue.nav ul, 
+.ui.blue.separate > li, 
+.ui.blue.module-tab .tab-nav li, 
+.ui.blue.vertical .tab-nav,
+.ui.blue.module-accordion .accordion-title,
+.ui.blue.window .bar, 
+.ui.blue.module-tab.panel .tab-nav {
+	background-color: #4d7de1;
+}
+.ui.blue, 
+.ui.blue.nav ul, 
+.ui.blue.nav li,
+.ui.blue.nav.separate > li,
+.ui.blue.module-tab .tab-nav li, 
+.ui.blue.module-accordion li,
+.ui.blue.window > div, 
+.ui.blue.module-tab .tab-nav {
+	border-color: #3e65b2;
+}
+
+/* blue hover */
+.ui.blue.builder_button:hover,
+.ui.blue.nav li:hover,
+.ui.blue.module-accordion li:hover .accordion-title,
+.ui.blue.module-tab .tab-nav li:hover { 
+	background: #6b9df9; 
+}
+
+/* blue current color */
+.ui.blue > li.current,
+.ui.blue > li.current:hover,
+.ui.blue .tab-nav li.current { 
+	background: #214178; 
+}
+
+
+/*  PURPLE COLOURS & BORDERS
+================================================ */
+.ui.purple, 
+.ui.purple.nav li a, 
+.ui.purple.nav ul li a, 
+.ui.purple.module-tab .tab-nav li a { 
+	color: #eeedff; 
+}
+.ui.purple, 
+.ui.purple.nav ul, 
+.ui.purple.separate > li, 
+.ui.purple.module-tab .tab-nav li, 
+.ui.purple.vertical .tab-nav,
+.ui.purple.module-accordion .accordion-title,
+.ui.purple.window .bar, 
+.ui.purple.module-tab.panel .tab-nav {
+	background-color: #7a6bf8;
+}
+.ui.purple, 
+.ui.purple.nav ul, 
+.ui.purple.nav li,
+.ui.purple.nav.separate > li,
+.ui.purple.module-tab .tab-nav li, 
+.ui.purple.module-accordion li,
+.ui.purple.window > div, 
+.ui.purple.module-tab .tab-nav {
+	border-color: #584eb2;
+}
+
+/* purple hover */
+.ui.purple.builder_button:hover,
+.ui.purple.nav li:hover,
+.ui.purple.module-accordion li:hover .accordion-title,
+.ui.purple.module-tab .tab-nav li:hover { 
+	background: #9589ff; 
+}
+
+/* purple current color */
+.ui.purple > li.current,
+.ui.purple > li.current:hover,
+.ui.purple .tab-nav li.current { 
+	background: #321396; 
+}
+
+
+/*  RED COLOURS & BORDERS
+================================================ */
+.ui.red, 
+.ui.red.nav li a, 
+.ui.red.nav ul li a, 
+.ui.red.module-tab .tab-nav li a { 
+	color: #ffeeed; 
+}
+.ui.red, 
+.ui.red.nav ul, 
+.ui.red.separate > li, 
+.ui.red.module-tab .tab-nav li, 
+.ui.red.vertical .tab-nav,
+.ui.red.module-accordion .accordion-title,
+.ui.red.window .bar, 
+.ui.red.module-tab.panel .tab-nav {
+	background-color: #e8311f;
+}
+.ui.red, 
+.ui.red.nav ul, 
+.ui.red.nav li,
+.ui.red.nav.separate > li,
+.ui.red.module-tab .tab-nav li, 
+.ui.red.module-accordion li,
+.ui.red.window > div, 
+.ui.red.module-tab .tab-nav {
+	border-color: #9d1d14;
+}
+
+/* red hover */
+.ui.red.builder_button:hover,
+.ui.red.nav li:hover,
+.ui.red.module-accordion li:hover .accordion-title,
+.ui.red.module-tab .tab-nav li:hover { 
+	background: #ff7568; 
+}
+
+/* red current color */
+.ui.red > li.current,
+.ui.red > li.current:hover,
+.ui.red .tab-nav li.current { 
+	background: #7a2023; 
+}
+
+
+/*  GREEN COLOURS & BORDERS
+================================================ */
+.ui.green, 
+.ui.green.nav li a, 
+.ui.green.nav ul li a, 
+.ui.green.module-tab .tab-nav li a { 
+	color: #e9ffdb; 
+}
+.ui.green, 
+.ui.green.nav ul, 
+.ui.green.separate > li, 
+.ui.green.module-tab .tab-nav li, 
+.ui.green.vertical .tab-nav,
+.ui.green.module-accordion .accordion-title,
+.ui.green.window .bar, 
+.ui.green.module-tab.panel .tab-nav {
+	background-color: #4aab10;
+}
+.ui.green, 
+.ui.green.nav ul, 
+.ui.green.nav li,
+.ui.green.nav.separate > li,
+.ui.green.module-tab .tab-nav li, 
+.ui.green.module-accordion li,
+.ui.green.window > div, 
+.ui.green.module-tab .tab-nav {
+	border-color: #33720b;
+}
+
+/* green hover */
+.ui.green.builder_button:hover,
+.ui.green.nav li:hover,
+.ui.green.module-accordion li:hover .accordion-title,
+.ui.green.module-tab .tab-nav li:hover { 
+	background: #6bbf2f; 
+}
+
+/* green current color */
+.ui.green > li.current,
+.ui.green > li.current:hover,
+.ui.green .tab-nav li.current { 
+	background: #2c5b09; 
+}
+
+.ui.green.module-tab.vertical .tab-nav > li.current {
+	border-bottom-color: inherit;
+}
+
+
+/*  ORANGE COLOURS & BORDERS
+================================================ */
+.ui.orange, 
+.ui.orange.nav li a, 
+.ui.orange.nav ul li a, 
+.ui.orange.module-tab .tab-nav li a { 
+	color: #fff2ea; 
+}
+.ui.orange, 
+.ui.orange.nav ul, 
+.ui.orange.separate > li, 
+.ui.orange.module-tab .tab-nav li, 
+.ui.orange.vertical .tab-nav,
+.ui.orange.module-accordion .accordion-title,
+.ui.orange.window .bar, 
+.ui.orange.module-tab.panel .tab-nav {
+	background-color: #ff9600;
+}
+.ui.orange, 
+.ui.orange.nav ul, 
+.ui.orange.nav li,
+.ui.orange.nav.separate > li,
+.ui.orange.module-tab .tab-nav li, 
+.ui.orange.module-accordion li,
+.ui.orange.window > div, 
+.ui.orange.module-tab .tab-nav {
+	border-color: #bc6e00;
+}
+
+/* orange hover */
+.ui.orange.builder_button:hover,
+.ui.orange.nav li:hover,
+.ui.orange.module-accordion li:hover .accordion-title,
+.ui.orange.module-tab .tab-nav li:hover { 
+	background: #ffb651; 
+}
+
+/* orange current color */
+.ui.orange > li.current,
+.ui.orange > li.current:hover,
+.ui.orange .tab-nav li.current { 
+	background: #a55000; 
+}
+
+
+/*  BROWN COLOURS & BORDERS
+================================================ */
+.ui.brown, 
+.ui.brown.nav li a, 
+.ui.brown.nav ul li a, 
+.ui.brown.module-tab .tab-nav li a { 
+	color: #ffeee0; 
+}
+.ui.brown, 
+.ui.brown.nav ul, 
+.ui.brown.separate > li, 
+.ui.brown.module-tab .tab-nav li, 
+.ui.brown.vertical .tab-nav,
+.ui.brown.module-accordion .accordion-title,
+.ui.brown.window .bar, 
+.ui.brown.module-tab.panel .tab-nav {
+	background-color: #a35004;
+}
+.ui.brown, 
+.ui.brown.nav ul, 
+.ui.brown.nav li,
+.ui.brown.nav.separate > li,
+.ui.brown.module-tab .tab-nav li, 
+.ui.brown.module-accordion li,
+.ui.brown.window > div, 
+.ui.brown.module-tab .tab-nav {
+	border-color: #622d07;
+}
+
+/* brown hover */
+.ui.brown.builder_button:hover,
+.ui.brown.nav li:hover,
+.ui.brown.module-accordion li:hover .accordion-title,
+.ui.brown.module-tab .tab-nav li:hover { 
+	background: #d68035; 
+}
+
+/* brown current color */
+.ui.brown > li.current,
+.ui.brown > li.current:hover,
+.ui.brown .tab-nav li.current { 
+	background: #6b3100; 
+}
+
+
+/*  BLACK COLOURS & BORDERS
+================================================ */
+.ui.black, 
+.ui.black.nav li a, 
+.ui.black.nav ul li a, 
+.ui.black.module-tab .tab-nav li a { 
+	color: #eee; 
+}
+.ui.black, 
+.ui.black.nav ul, 
+.ui.black.separate > li, 
+.ui.black.module-tab .tab-nav li, 
+.ui.black.vertical .tab-nav,
+.ui.black.module-accordion .accordion-title,
+.ui.black.window .bar, 
+.ui.black.module-tab.panel .tab-nav {
+	background-color: #252525;
+}
+.ui.black, 
+.ui.black.nav ul, 
+.ui.black.nav li,
+.ui.black.nav.separate > li,
+.ui.black.module-tab .tab-nav li, 
+.ui.black.module-accordion li,
+.ui.black.window > div, 
+.ui.black.module-tab .tab-nav {
+	border-color: #000000;
+}
+
+/* black hover */
+.ui.black.builder_button:hover,
+.ui.black.nav li:hover,
+.ui.black.module-accordion li:hover .accordion-title,
+.ui.black.module-tab .tab-nav li:hover { 
+	background: #595959; 
+}
+
+/* black current color */
+.ui.black > li.current,
+.ui.black > li.current:hover,
+.ui.black .tab-nav li.current { 
+	background: #101010; 
+}
+
+
+/*  GRAY COLOURS & BORDERS
+================================================ */
+.ui.gray, 
+.ui.gray.nav li a, 
+.ui.gray.nav ul li a, 
+.ui.gray.module-tab .tab-nav li a { 
+	color: #eee; 
+}
+.ui.gray, 
+.ui.gray.nav ul, 
+.ui.gray.separate > li, 
+.ui.gray.module-tab .tab-nav li, 
+.ui.gray.vertical .tab-nav,
+.ui.gray.module-accordion .accordion-title,
+.ui.gray.window .bar, 
+.ui.gray.module-tab.panel .tab-nav {
+	background-color: #989797;
+}
+.ui.gray, 
+.ui.gray.nav ul, 
+.ui.gray.nav li,
+.ui.gray.nav.separate > li,
+.ui.gray.module-tab .tab-nav li, 
+.ui.gray.module-accordion li,
+.ui.gray.window > div, 
+.ui.gray.module-tab .tab-nav {
+	border-color: #666;
+}
+
+/* gray hover */
+.ui.gray.builder_button:hover,
+.ui.gray.nav li:hover,
+.ui.gray.module-accordion li:hover .accordion-title,
+.ui.gray.module-tab .tab-nav li:hover { 
+	background: #c9c9c9;
+}
+
+/* gray current color */
+.ui.gray > li.current,
+.ui.gray > li.current:hover,
+.ui.gray .tab-nav li.current { 
+	background: #636363; 
+}
+
+
+/*  LIGHT-BLUE COLOURS & BORDERS
+================================================ */
+.ui.light-blue, 
+.ui.light-blue.nav li a, 
+.ui.light-blue.nav ul li a, 
+.ui.light-blue.module-tab .tab-nav li a { 
+	color: #2a3e59; 
+}
+.ui.light-blue > li.current > a {
+	color: #FFF;
+}
+.ui.light-blue, 
+.ui.light-blue.nav ul, 
+.ui.light-blue.separate > li, 
+.ui.light-blue.module-tab .tab-nav li, 
+.ui.light-blue.vertical .tab-nav,
+.ui.light-blue.module-accordion .accordion-title,
+.ui.light-blue.window .bar, 
+.ui.light-blue.module-tab.panel .tab-nav {
+	background-color: #bdd9fd;
+}
+.ui.light-blue, 
+.ui.light-blue.nav ul, 
+.ui.light-blue.nav li,
+.ui.light-blue.nav.separate > li,
+.ui.light-blue.module-tab .tab-nav li, 
+.ui.light-blue.module-accordion li,
+.ui.light-blue.window > div, 
+.ui.light-blue.module-tab .tab-nav {
+	border-color: #6694d6;
+}
+
+/* light-blue hover */
+.ui.light-blue.builder_button:hover,
+.ui.light-blue.nav li:hover,
+.ui.light-blue.module-accordion li:hover .accordion-title,
+.ui.light-blue.module-tab .tab-nav li:hover { 
+	background: #d3e7ff; 
+}
+
+/* light-blue current color */
+.ui.light-blue > li.current,
+.ui.light-blue > li.current:hover,
+.ui.light-blue .tab-nav li.current { 
+	background: #7e98b5; 
+}
+
+
+/*  LIGHT-PURPLE COLOURS & BORDERS
+================================================ */
+.ui.light-purple, 
+.ui.light-purple.nav li a, 
+.ui.light-purple.nav ul li a, 
+.ui.light-purple.module-tab .tab-nav li a { 
+	color: #39355b; 
+}
+.ui.light-purple > li.current > a {
+	color: #FFF;
+}
+.ui.light-purple, 
+.ui.light-purple.nav ul, 
+.ui.light-purple.separate > li, 
+.ui.light-purple.module-tab .tab-nav li, 
+.ui.light-purple.vertical .tab-nav,
+.ui.light-purple.module-accordion .accordion-title,
+.ui.light-purple.window .bar, 
+.ui.light-purple.module-tab.panel .tab-nav {
+	background-color: #c1bafd;
+}
+.ui.light-purple, 
+.ui.light-purple.nav ul, 
+.ui.light-purple.nav li,
+.ui.light-purple.nav.separate > li,
+.ui.light-purple.module-tab .tab-nav li, 
+.ui.light-purple.module-accordion li,
+.ui.light-purple.window > div, 
+.ui.light-purple.module-tab .tab-nav {
+	border-color: #7f76cc;
+}
+
+/* light-purple hover */
+.ui.light-purple.builder_button:hover,
+.ui.light-purple.nav li:hover,
+.ui.light-purple.module-accordion li:hover .accordion-title,
+.ui.light-purple.module-tab .tab-nav li:hover { 
+	background: #d3ceff; 
+}
+
+/* light-purple current color */
+.ui.light-purple > li.current,
+.ui.light-purple > li.current:hover,
+.ui.light-purple .tab-nav li.current { 
+	background: #6c678c; 
+}
+
+
+/*  LIGHT-GREEN COLOURS & BORDERS
+================================================ */
+.ui.light-green, 
+.ui.light-green.nav li a, 
+.ui.light-green.nav ul li a, 
+.ui.light-green.module-tab .tab-nav li a { 
+	color: #293807; 
+}
+.ui.light-green > li.current > a {
+	color: #FFF;
+}
+.ui.light-green, 
+.ui.light-green.nav ul, 
+.ui.light-green.separate > li, 
+.ui.light-green.module-tab .tab-nav li, 
+.ui.light-green.vertical .tab-nav,
+.ui.light-green.module-accordion .accordion-title,
+.ui.light-green.window .bar, 
+.ui.light-green.module-tab.panel .tab-nav {
+	background-color: #9bd611;
+}
+.ui.light-green, 
+.ui.light-green.nav ul, 
+.ui.light-green.nav li,
+.ui.light-green.nav.separate > li,
+.ui.light-green.module-tab .tab-nav li, 
+.ui.light-green.module-accordion li,
+.ui.light-green.window > div, 
+.ui.light-green.module-tab .tab-nav {
+	border-color: #71a115;
+}
+
+/* light-green hover */
+.ui.light-green.builder_button:hover,
+.ui.light-green.nav li:hover,
+.ui.light-green.module-accordion li:hover .accordion-title,
+.ui.light-green.module-tab .tab-nav li:hover { 
+	background: #c1ed53; 
+}
+
+/* light-green current color */
+.ui.light-green > li.current,
+.ui.light-green > li.current:hover,
+.ui.light-green .tab-nav li.current { 
+	background: #6d9900; 
+}
+
+
+/*  PINK COLOURS & BORDERS
+================================================ */
+.ui.pink, 
+.ui.pink.nav li a, 
+.ui.pink.nav ul li a, 
+.ui.pink.module-tab .tab-nav li a { 
+	color: #441e32; 
+}
+.ui.pink > li.current > a {
+	color: #FFF;
+}
+.ui.pink, 
+.ui.pink.nav ul, 
+.ui.pink.separate > li, 
+.ui.pink.module-tab .tab-nav li, 
+.ui.pink.vertical .tab-nav,
+.ui.pink.module-accordion .accordion-title,
+.ui.pink.window .bar, 
+.ui.pink.module-tab.panel .tab-nav {
+	background-color: #feb4e4;
+}
+.ui.pink, 
+.ui.pink.nav ul, 
+.ui.pink.nav li,
+.ui.pink.nav.separate > li,
+.ui.pink.module-tab .tab-nav li, 
+.ui.pink.module-accordion li,
+.ui.pink.window > div, 
+.ui.pink.module-tab .tab-nav {
+	border-color: #b27e9d;
+}
+
+/* pink hover */
+.ui.pink.builder_button:hover,
+.ui.pink.nav li:hover,
+.ui.pink.module-accordion li:hover .accordion-title,
+.ui.pink.module-tab .tab-nav li:hover { 
+	background: #ffd1ee; 
+}
+
+/* pink current color */
+.ui.pink > li.current,
+.ui.pink > li.current:hover,
+.ui.pink .tab-nav li.current { 
+	background: #db6fa8; 
+}
+
+
+/*  YELLOW COLOURS & BORDERS
+================================================ */
+.ui.yellow, 
+.ui.yellow.nav li a, 
+.ui.yellow.nav ul li a, 
+.ui.yellow.module-tab .tab-nav li a { 
+	color: #594718;
+}
+.ui.yellow > li.current > a {
+	color: #FFF;
+}
+.ui.yellow, 
+.ui.yellow.nav ul, 
+.ui.yellow.separate > li, 
+.ui.yellow.module-tab .tab-nav li, 
+.ui.yellow.vertical .tab-nav,
+.ui.yellow.module-accordion .accordion-title,
+.ui.yellow.window .bar, 
+.ui.yellow.module-tab.panel .tab-nav {
+	background-color: #fff06c;
+}
+.ui.yellow, 
+.ui.yellow.nav ul, 
+.ui.yellow.nav li,
+.ui.yellow.nav.separate > li,
+.ui.yellow.module-tab .tab-nav li, 
+.ui.yellow.module-accordion li,
+.ui.yellow.window > div, 
+.ui.yellow.module-tab .tab-nav {
+	border-color: #dcb232;
+}
+
+/* yellow hover */
+.ui.yellow.builder_button:hover,
+.ui.yellow.nav li:hover,
+.ui.yellow.module-accordion li:hover .accordion-title,
+.ui.yellow.module-tab .tab-nav li:hover { 
+	background: #fff4b2; 
+}
+
+/* yellow current color */
+.ui.yellow > li.current,
+.ui.yellow > li.current:hover,
+.ui.yellow .tab-nav li.current { 
+	background: #b29e1c; 
+}
+
+
+/************************************************************************************
+ELEMENTS
+*************************************************************************************/
+
+/*  DEFAULTS
+================================================ */
+
+.ui.builder_button,
+.ui.nav li > a,
+.ui.module-tab .tab-nav > li > a { 
+	display: inline-block; 
+	text-decoration: none; 
+	line-height: 130%; 
+}
+
+.ui.builder_button:hover,
+.ui.nav li > a:hover,
+.ui.module-tab .tab-nav > li > a:hover {
+	display: inline-block;
+	text-decoration: none;
+}
+
+/* BORDER
+================================================ */
+
+.ui.builder_button,
+.ui.nav,
+.ui.nav ul,
+.ui.nav.separate > li,
+.ui.module-tab .tab-nav > li,
+.ui.module-tab .tab-content,
+.ui.module-tab.panel .tab-nav,
+.ui.module-accordion,
+.ui.module-accordion > li,
+.ui.module-callout {
+	border-style: solid;
+	border-width: 1px;
+}
+
+/* NAV
+================================================ */
+
+.ui.nav         {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+.ui.nav li {
+	float: left;
+	position: relative;
+}
+
+/* drop down */
+.ui.nav ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 999;
+	margin-left: -1px;
+}
+.ui.nav ul ul {
+	left: 100%; top: 0;
+}
+.ui.nav ul,
+.ui.nav ul > li {
+	width: 180px;
+	margin: 0;
+}
+.ui.nav ul > li > a,
+.ui.nav li:hover > ul {
+	display: block;
+}
+.ui.nav > li + li {
+	border-left-width: 1px;
+	border-left-style: solid;
+}
+.ui.nav.vertical > li + li {
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-color: inherit;
+}
+
+/* vertical navigation */
+.ui.nav.vertical {
+	width: 180px;
+	max-width: 100%;
+}
+.ui.nav.vertical > li {
+	float: none;
+	border: none;
+}
+.ui.nav.vertical > li a {
+	display: block;
+}
+.ui.nav.vertical ul {
+	left: 100%;
+	top: 0;
+}
+
+/* separate nav items */
+.ui.nav.separate {
+	border: none;
+	background: none;
+}
+.ui.nav.separate li {
+	margin-right: 5px;
+}
+.ui.nav.separate.vertical li {
+	margin-right: 0;
+	margin-bottom: 5px;
+}
+.ui.nav.separate.vertical ul li {
+	margin-bottom: 0;
+}
+
+/* full width nav-bar */
+.ui.nav.fullwidth {
+	display: block;
+}
+.ui.nav.fullwidth > li,
+.ui.window > .nav > li {
+	border:none;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-color: inherit;
+}
+
+/* TAB
+================================================ */
+.ui.module-tab {
+	position: relative;
+	background: none !important;
+	margin-bottom: 20px;
+}
+.ui.module-tab .tab-nav {
+	display: block;
+	padding-left: 5px;
+}
+
+.ui.module-tab,
+.ui.module-tab .tab-nav li a {
+	display: block;
+}
+.ui.module-tab .tab-nav li {
+	float: left;
+	margin-right: 2px;
+	margin-bottom: 0;
+	border-bottom-width: 0;
+}
+.ui.module-tab .tab-content {
+	margin-top: -1px;
+	padding: 20px;
+	border-color: inherit;
+	clear: both;
+}
+.ui.module-tab .tab-content h1,
+.ui.module-tab .tab-content h2,
+.ui.module-tab .tab-content h3,
+.ui.module-tab .tab-content h4,
+.ui.module-tab .tab-content h5,
+.ui.module-tab .tab-content h6 {
+	color: inherit;
+	margin-top: 0;
+}
+.ui.module-tab .tab-content.active {
+	display: block;
+	clear:both;
+}
+
+/* vertical tab */
+.ui.module-tab.vertical {
+	padding-left: 160px;
+}
+.ui.module-tab.vertical .tab-nav {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 160px;
+	padding-left: 0;
+}
+.ui.module-tab.vertical .tab-nav li {
+	float: none;
+	background: none;
+	margin: -1px -1px 0 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.ui.module-tab.vertical .tab-content {
+	position: relative;
+	min-height: 200px;
+	z-index: 2;
+}
+
+/*  tab panel */
+.ui.module-tab.panel .tab-nav {
+	padding-top: 5px;
+	border-bottom: none;
+	position: relative;
+	box-shadow: inset 0 -3px 3px rgba(0,0,0,.1);
+}
+.ui.module-tab.panel .tab-nav:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,.1);
+}
+
+/*  WINDOW
+================================================ */
+.ui.window .bar,
+.ui.window .content {
+	display: block;
+	cursor: default;
+	position: relative;
+}
+.ui.window {
+	border-width: 1px;
+	border-style: solid;
+}
+.ui.window .bar {
+	display: block;
+	box-shadow: none;
+}
+.ui.window .bar + .bar,
+.ui.window .bar + .content,
+.ui.window .content + .bar {
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+
+.ui.window > .ui.bar {
+	margin: -1px -1px;
+}
+.ui.window > .ui.bar.tab + .content {
+	border-top: none;
+}
+.ui.window > .ui.bar.tab {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-color: inherit;
+	margin: 0;
+}
+
+.ui.window .tab {
+	padding-bottom: 0;
+}
+
+/* fix clearfix issue within containers using inline-block */
+.ui.window .nav {
+	display: block;
+}
+
+.ui.window .left {
+	float: left;
+}
+.ui.window .center {
+	overflow: hidden;
+	text-align: center;
+}
+.ui.window .right {
+	float: right;
+}
+
+/*  ACCORDION
+================================================ */
+.ui.module-accordion {
+	margin-bottom: 20px;
+}
+.ui.module-accordion h1,
+.ui.module-accordion h2,
+.ui.module-accordion h3,
+.ui.module-accordion h4,
+.ui.module-accordion h5,
+.ui.module-accordion h6 {
+	color: inherit;
+	margin-top: 0;
+}
+.ui.module-accordion > li {
+	border-width: 1px 0 0;
+	position: relative;
+}
+.ui.module-accordion li.current {
+	background: none;
+	box-shadow: none;
+}
+.ui.module-accordion li.current .accordion-content {
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+}
+.ui.module-accordion .accordion-title {
+	font-size: 105%;
+	line-height: 140%;
+	font-weight: bold;
+	margin: 0;
+	position: relative;
+}
+.ui.module-accordion li:first-child {
+	border-top-width: 0;
+}
+.ui.module-accordion .accordion-title a {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+	padding: 5px 10px;
+}
+.ui.module-accordion .accordion-title a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+.ui.module-accordion .accordion-content {
+	padding: 10px;
+}
+
+/* accordion separate */
+.ui.module-accordion.separate {
+	background: none;
+	border: none;
+}
+.ui.module-accordion.separate li,
+.ui.module-accordion.separate li:first-child {
+	margin-bottom: 5px;
+	border-width: 1px;
+}
+
+/*  BOX
+================================================ */
+.ui.module-box {
+	margin-bottom: 20px;
+	padding: 15px 20px;
+	position: relative;
+}
+.ui.module-box h1,
+.ui.module-box h2,
+.ui.module-box h3,
+.ui.module-box h4,
+.ui.module-box h5,
+.ui.module-box h6 {
+	color: inherit;
+	margin-top: 0;
+}
+
+/*  CALLOUT
+================================================ */
+.ui.module-callout {
+	margin-bottom: 20px;
+	padding: 15px 20px;
+	position: relative;
+}
+.ui.module-callout p {
+	margin: 0 0 5px;
+}
+.ui.module-callout .callout-heading {
+	color: inherit;
+	font-size: 140%;
+	line-height: 130%;
+	margin: 0 0 5px;
+	padding: 0;
+}
+.ui.module-callout .callout-content {
+	float: left;
+}
+.ui.module-callout .callout-button {
+	float: right;
+}
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+@media screen and (max-width: 600px) {
+	
+	/* nav */
+	.ui.builder_button,
+	.ui.nav li a,
+	.ui.module-tab .tab-nav li a,
+	.ui.window > div {
+		padding: .525em 1.15em;
+	}
+	
+	/* tab */
+	.ui.module-tab.vertical .tab-nav {
+		width: 120px;
+		font-size: 95%;
+	}
+	.ui.module-tab.vertical {
+		padding-left: 120px;
+	}
+}
